@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mayhemcreations website</title>
+  <meta name="description" content="Mayhemcreations website">
+  <meta name="Major Mayhem (@Mayhemcreations)" content="SitePoint">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class='wrap' id='app'>
+        <p class='nav' v-on:click='rotate(true, 5)'>&#8593</p>
+        <div class='rotator_wrap' id='rotator_wrap'>
+            <div class='circle'></div>
+            <div class='cube' v-bind:style="{ 'transform': 'rotate3d(1,0,0,' + cube_vertical * 4 + 'deg)' }">
+                <div class='side front'>
+                    <div class='menu' style='transform: rotateX(180deg);'>
+                        <div class='el'>
+                            <a v-on:click='reset_rotation'>ROTATE TO MENU</a>
+                        </div>
+                    </div>
+                </div>
+                <div class='side back'>
+                    <div class='menu' style='transform: rotateX(0deg);'>
+                        <div class='el'>
+                            <a href='https://www.tiktok.com/@mayhemcreations' target='_blank'>TikTok</a>
+                        </div>
+                        <div class='el'>
+                            <a href='#'>Telegram</a>
+                        </div>
+                        <div class='el'>
+                            <a href='#'>Instructions</a>
+                        </div>
+                        <div class='el'>
+                            <a href='https://www.bricklink.com/v3/studio/download.page' target='_blank'>BrickLink STUDIO</a>
+                        </div>
+                    </div>
+                </div>
+                <div class='side left'></div> 
+                <div class='side right'></div>
+                <div class='side top'>
+                    <a class='logo'></a>
+                </div>
+                <div class='side bot'>
+                    <a class='logo brain'></a>
+                </div>
+            </div>
+        </div>
+
+        <p class='nav' v-on:click='rotate(false, 5)'>&#8595</p>
+
+    </div>
+
+<script src="https://unpkg.com/vue@next"></script>
+<script src="src/app.js"></script>
+</body>
+</html>
