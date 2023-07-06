@@ -9,6 +9,7 @@ const app = {
     mounted(){
         window.addEventListener('mousewheel', this.handleScroll);
         window.addEventListener('mousemove', this.handleMove);
+        window.addEventListener('touchmove', this.handleScroll);
     },
     methods:{
         rotate: function(up, amount){
